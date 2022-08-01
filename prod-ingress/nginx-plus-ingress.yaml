@@ -19,7 +19,7 @@ spec:
     spec:
       serviceAccountName: nginx-ingress
       containers:
-      - image: localhost:5000/nginx-plus-ingress
+      - image: localhost:5000/nginx-plus-ingress:latest
         imagePullPolicy: Never
         name: nginx-plus-ingress
         ports:
