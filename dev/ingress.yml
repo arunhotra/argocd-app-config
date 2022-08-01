@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-dev-arcadia
+  namespace: dev-arcadia
 spec:
   rules:
   - http:
@@ -27,4 +28,3 @@ spec:
             name: arcadia-app3
             port:
               number: 80
-  ingressClassName: nginx
