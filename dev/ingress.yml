@@ -28,3 +28,4 @@ spec:
             name: arcadia-app3
             port:
               number: 80
+  ingressClassName: nginx
