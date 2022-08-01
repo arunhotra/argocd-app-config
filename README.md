@@ -7,7 +7,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 
 kubectl port-forward --namespace=dev-arcadia service/ingress-nginx-controller 8081:80
-kubectl port-forward --namespace=dev-cafe service/ingress-nginx-controller 8082:80
+kubectl port-forward --namespace=dev-cafe service/ingress-nginx-controller 8082:443
 
 
 
