@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod-arcadia
+  name: dev-arcadia
   namespace: argocd
 spec:
   project: default
@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: https://github.com/arunhotra/argocd-app-config.git
     targetRevision: HEAD
-    path: prod
+    path: dev-arcadia
   destination: 
     server: https://kubernetes.default.svc
-    namespace: prod-arcadia
+    namespace: dev-arcadia
 
   syncPolicy:
     syncOptions:
