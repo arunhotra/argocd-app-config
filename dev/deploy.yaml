@@ -336,7 +336,7 @@ metadata:
   name: ingress-nginx-controller
   namespace: dev-arcadia
 spec:
-  externalTrafficPolicy: Local
+  # externalTrafficPolicy: Local
   ports:
   - appProtocol: http
     name: http
@@ -352,7 +352,7 @@ spec:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
     app.kubernetes.io/name: ingress-nginx
-  type: LoadBalancer
+  # type: LoadBalancer
 ---
 apiVersion: v1
 kind: Service
