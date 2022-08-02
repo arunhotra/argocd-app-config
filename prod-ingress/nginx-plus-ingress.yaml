@@ -44,7 +44,7 @@ spec:
          #  cpu: "1"
          #  memory: "1Gi"
         securityContext:
-          allowPrivilegeEscalation: true
+          # allowPrivilegeEscalation: true
           runAsUser: 101 #nginx
           runAsNonRoot: true
           capabilities:
@@ -52,19 +52,19 @@ spec:
             - ALL
             add:
             - NET_BIND_SERVICE
-        env:
-        - name: POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
-        - name: POD_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
+        # env:
+        # - name: POD_NAMESPACE
+        #   valueFrom:
+        #     fieldRef:
+        #       fieldPath: metadata.namespace
+        # - name: POD_NAME
+        #   valueFrom:
+        #     fieldRef:
+        #       fieldPath: metadata.name
         args:
           - -nginx-plus
-          - -nginx-configmaps=$(POD_NAMESPACE)/nginx-config
-          - -default-server-tls-secret=$(POD_NAMESPACE)/default-server-secret
+          - -nginx-configmaps= prod-ingress/nginx-config
+          - -default-server-tls-secret= prod-ingress/default-server-secret
          #- -enable-cert-manager
          #- -enable-external-dns
          #- -enable-app-protect
