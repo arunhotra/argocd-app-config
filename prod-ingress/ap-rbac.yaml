@@ -21,7 +21,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: nginx-ingress
-  namespace: nginx-ingress
+  namespace: prod-ingress
 roleRef:
   kind: ClusterRole
   name: nginx-ingress-app-protect
